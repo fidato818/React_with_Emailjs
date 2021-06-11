@@ -11,13 +11,7 @@ export default class App extends React.Component {
   sendEmail(e) {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "gmail",
-        "template_opwjw88",
-        e.target,
-        "user_9GNAql6wVXgFLUtYx6xjP"
-      )
+   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
       .then(
         (result) => {
           console.log(result.text);
